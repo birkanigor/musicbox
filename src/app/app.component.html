@@ -11,7 +11,7 @@
           </h5>
           <section>
             <figure>
-              <img src="{{ band.image }}" [ngClass]="['thumbnail','shadow']" (click)="test($event.target)" />              
+              <img src="{{ band.image }}" [ngClass]="['thumbnail','shadow']" (click)="imgOnClck($event.target)" />              
             </figure>
             <button class="btn" (click)="onPlay(band, bandIndex)" >Play Music</button>
           </section>
@@ -20,15 +20,7 @@
     </div> 
 
   </div>
-      <!--
-        <section>{{names.length}}</section>
-        <div class="col s4" *ngFor="let name of names;">{{name}}</div>
-        <bottom-footer></bottom-footer>
-        <object data="http://www.youtube.com/embed/W7qWa52k-nE"   width="560" height="315"></object>
-        https://www.youtube.com/watch?v=hTWKbfoikeg
-      -->      
-
-
+      <!-- <bottom-footer></bottom-footer> -->      
 </div>
 <div style="text-align: center;">
   <iframe id="video" width="600" height="300" frameorder="0" frameBorder="0"></iframe>

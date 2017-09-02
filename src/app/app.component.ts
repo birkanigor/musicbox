@@ -37,7 +37,7 @@ export class AppComponent {
     videoIframe.src=band.src;
   }
 
-  test(obj:HTMLImageElement){ 
+  imgOnClck(obj:HTMLImageElement){ 
 
     if(obj.height==80){
       obj.style.height="96px";
