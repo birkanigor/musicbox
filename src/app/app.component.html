@@ -1,0 +1,35 @@
+<div class="container">
+  <top-header></top-header>
+  <marquee behavior="scroll" direction="left" scrollamount="20" ><p>{{title}}</p></marquee>
+  <div class="row">
+
+    <div class="col s3" *ngFor="let band of bands;" >
+      <div class="card">
+        <div class="card-content" *ngIf="band.rating > 3">
+          <h5 class="card-title" > 
+            {{band.name}}
+          </h5>
+          <section>
+            <figure>
+              <img src="{{ band.image }}" [ngClass]="['thumbnail','shadow']" (click)="test($event.target)" />              
+            </figure>
+            <button class="btn" (click)="onPlay(band, bandIndex)" >Play Music</button>
+          </section>
+        </div>
+      </div>
+    </div> 
+
+  </div>
+      <!--
+        <section>{{names.length}}</section>
+        <div class="col s4" *ngFor="let name of names;">{{name}}</div>
+        <bottom-footer></bottom-footer>
+        <object data="http://www.youtube.com/embed/W7qWa52k-nE"   width="560" height="315"></object>
+        https://www.youtube.com/watch?v=hTWKbfoikeg
+      -->      
+
+
+</div>
+<div style="text-align: center;">
+  <iframe id="video" width="600" height="300" frameorder="0" frameBorder="0"></iframe>
+</div>
